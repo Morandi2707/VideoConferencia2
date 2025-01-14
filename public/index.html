@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Videoconferência</title>
+    <link rel="stylesheet" href="app.css" />
+    <link rel="icon" href="assets/favicon.ico" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1 class="title">Videoconferência</h1>
+      </header>
+
+      <div class="video-container">
+        <div class="video-wrapper">
+          <video id="localVideo" autoplay playsinline muted></video>
+          <p class="video-label">Você</p>
+        </div>
+        <div id="remoteVideos" class="remote-videos"></div>
+      </div>
+
+      <div class="controls">
+        <button id="joinCall" class="button">Entrar na Chamada</button>
+        <button id="leaveCall" class="button" disabled>Sair da Chamada</button>
+        <button id="muteAudio" class="button">Mutar</button>
+        <button id="muteVideo" class="button">Desligar Câmera</button>
+        <button id="toggleFullscreen" class="button">Tela Cheia</button>
+      </div>
+    </div>
+
+    <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
